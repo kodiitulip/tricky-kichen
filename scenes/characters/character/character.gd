@@ -3,7 +3,7 @@ class_name Character
 
 @export var animation_tree: AnimationTree
 
-@export var cur_dir: Vector2 = Vector2.DOWN
+@export var cur_dir: Vector2 = Vector2.ZERO
 @export var max_speed: float = 150.0
 @export var min_speed: float = 100.0
 var cur_speed: float
@@ -28,7 +28,7 @@ func update_sprite_anim(dir: Vector2) -> void:
 		return
 	
 	if not dir or dir.is_zero_approx():
-		animation_tree.set("parameters/conditions/is_walking", true)
+		animation_tree.set("parameters/conditions/is_walking", false)
 		animation_tree.set("parameters/conditions/is_idle", true)
 		return
 	

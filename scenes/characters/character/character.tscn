@@ -238,6 +238,7 @@ states/Walk/position = Vector2(700, 99.7778)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_i7xmg"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_vebpj"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_d8mlg")]
 
 [node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("animation_tree")]
+collision_layer = 0
 script = ExtResource("1_4ogpg")
 animation_tree = NodePath("AnimationTree")
 
@@ -259,7 +260,6 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-reset_on_save = false
 libraries = {
 "": SubResource("AnimationLibrary_djlnn")
 }

@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://b41ye5h4kx0mf"]
+
+[ext_resource type="Texture2D" uid="uid://btt7uuhp6s5u7" path="res://assets/objects/furniture/wooden_benches.png" id="1_3t8f1"]
+[ext_resource type="Script" path="res://scenes/objects/object.gd" id="1_qxdoy"]
+[ext_resource type="Script" path="res://scripts/components/seat_component.gd" id="3_0skox"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovb7l"]
+atlas = ExtResource("1_3t8f1")
+region = Rect2(0, 0, 16, 16)
+
+[node name="WoodenStool" type="Sprite2D" groups=["chair", "object"]]
+texture = SubResource("AtlasTexture_ovb7l")
+script = ExtResource("1_qxdoy")
+
+[node name="SeatComponent" type="Node2D" parent="."]
+script = ExtResource("3_0skox")
